@@ -1,0 +1,102 @@
+/* 
+   Reset de márgenes y modelo de caja para todos los elementos.
+   Esto ayuda a evitar problemas de espaciado y tamaño inesperados.
+*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+   Fuente base para todo el documento.
+   Arial y Helvetica son fuentes sans-serif comunes y legibles.
+*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+   Contenedor principal con Grid Layout.
+   - 4 columnas y 4 filas de igual tamaño.
+   - Áreas nombradas para facilitar la colocación de los elementos hijos.
+   - Tamaño máximo de 700px y centrado horizontal.
+   - Borde exterior para visualizar el área del grid.
+*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    grid-template-rows: repeat(4, 1fr);    /* 4 filas iguales */
+
+    /* 
+       Definición de las áreas del grid:
+       - header ocupa toda la primera fila (4 columnas)
+       - main ocupa las 3 primeras columnas de la 2da y 3ra fila
+       - sidebar ocupa la última columna de la 2da y 3ra fila
+       - footer ocupa toda la última fila (4 columnas)
+    */
+    grid-template-areas: 
+        "header header header header"
+        "main main main sidebar"
+        "main main main sidebar"
+        "footer footer footer footer";
+
+    width: 90%;
+    max-width: 700px;
+    height: 600px;
+    outline: 3px solid;
+    margin: 20px auto;
+}
+
+/* 
+   Estilos generales para los elementos del grid.
+   - Tamaño de fuente grande.
+   - Centrado de contenido tanto vertical como horizontal.
+   - Texto en color blanco para mejor contraste.
+*/
+.item{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* 
+   Área del header.
+   - Fondo rojo.
+   - Se posiciona en el área 'header' definida en el grid.
+*/
+.header{
+    background-color: red;
+    grid-area: header;
+}
+
+/* 
+   Área principal.
+   - Fondo aqua.
+   - Se posiciona en el área 'main' definida en el grid.
+*/
+.main{
+    background-color: aqua;
+    grid-area: main;
+}
+
+/* 
+   Barra lateral.
+   - Fondo burlywood.
+   - Se posiciona en el área 'sidebar' definida en el grid.
+*/
+.sidebar{
+    background-color: burlywood;
+    grid-area: sidebar;
+}
+
+/* 
+   Pie de página.
+   - Fondo steelblue.
+   - Se posiciona en el área 'footer' definida en el grid.
+*/
+.footer{
+    background-color: steelblue;
+    grid-area: footer;
+}

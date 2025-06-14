@@ -1,0 +1,154 @@
+:root {
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    /* Neutrales */
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background: var(--off-white);
+    color: var(--very-dark-blue);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+
+}
+
+.nav_link {
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    transition: color 0.2;
+
+}
+
+.hero-section {
+    display: flex;
+    margin: 0 auto;
+    padding: 1.6rem;
+    width: 80%;
+
+
+}
+
+.hero_artitcle{
+        width: 90%;
+}
+
+.hero_img {
+    width: 100%;
+    display: block;
+
+}
+
+.hero_content {
+    display: flex;
+
+}
+
+
+.hero_title {
+    font-weight: 900;
+    font-size: 50px;
+
+}
+
+.hero_description {
+    padding: 17px;
+    font-size: 15px;
+    line-height: 2.0;
+    color: var(--dark-grayish-blue);
+
+}
+
+.hero_btn {
+    display: inline-block;
+    line-height: 1;
+    margin: 0 auto;
+    background-color: #f15e50; 
+    color: #000;
+    border: none;
+    padding: 1em 2.5em;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.aside{
+    margin-left: 40px;
+    background: var(--very-dark-blue);
+}
+.aside_title{
+    color: var(--Soft-orange);
+    padding-left: 20px;
+    font-size: 40px;
+}
+
+.aside_article{
+    padding-left: 20px;
+}
+
+
+.article_aside_title{
+    color: white;
+    font-size: 25px;
+}
+
+.article_aside_parrafo{
+    color: var(--dark-grayish-blue);
+    font-size: 15px;
+}
+
+.linea{
+    width: 95%;
+    color: var(--dark-grayish-blue);
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 1.6rem;
+    width: 80%;
+
+}
+
+.card_article{
+    display: flex;
+}
+
+.card_img{
+    padding-left: 20px;
+}
+
+.card_info{
+    padding-left: 30px;
+}
+
+.card_span{
+    font-size: 40px;
+    color: var(--Soft-red);
+}
+
+.card_titulo{
+    font-size: 20px;
+}
+
+.parrafo{
+    color: var(--dark-grayish-blue);
+}
