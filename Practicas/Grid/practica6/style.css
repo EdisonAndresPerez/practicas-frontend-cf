@@ -1,0 +1,128 @@
+:root {
+  /* Primary */
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+
+  /* Neutral */
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Para Fraunces */
+  --font-headings: "Fraunces", serif;
+
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  max-width: 800px;
+  min-height: 760px;
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  animation: fade .8s .6s both ease-in;
+}
+
+@keyframes fade{
+ 0%{
+  opacity: 0;
+ }
+
+ 100%{
+  opacity: 1;
+ }
+}
+
+.main_bg {
+  min-height: 250px;
+  background-image: url(images/image-product-mobile.jpg);
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.main_texts {
+  background-color: var(--white);
+  padding: 1.5em 2em;
+  border-radius: 0 0 10px 10px;
+}
+
+.main_product {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--black);
+  padding-bottom: 10px;
+}
+
+.main_title {
+  font-family: var(--font-headings);
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+.main_paragraph {
+  line-height: 1.5;
+  margin-bottom: 1.8em;
+  color: var(--grey);
+
+}
+
+.main_price {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.8rem;
+  color: var(--green-700);
+  font-family: var(--font-headings);
+  letter-spacing: 2px;
+}
+
+.main_sold {
+  color: var(--black);
+  font-size: initial;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: line-through;
+}
+
+.main_cta {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;
+  gap: 1em;
+  
+  margin-top: 1.5em;
+  padding: 1em 0;
+  text-decoration: none;
+  color: #ffff;
+  border-radius: 8px;
+  background-color: var(--green-700);
+}
+
+.main_cta::before {
+  content: url(images/icon-cart.svg);
+}
+
+@media(min-width:667px){
+  .main_bg{
+    border-radius: 10px 0 0 10px;
+  }
+
+  .main_texts{
+    border-radius: 0 10px 10px 0;
+  }
+}
